@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/img"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Italian Red Sauce Pasta"
+        android:id="@+id/tvName"
+        android:layout_below="@+id/img"
+        android:padding="5sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This authentic Italian tomato sauce is so quick, and easy to make that it’s ready before the pasta is finished cooking! Read the reviews; when you make this once, you’ll never go back to those inauthentic, sugar-filled jar sauces or inauthentic American recipes. Buon appetito!"
+        android:id="@+id/tvDescription"
+        android:layout_below="@+id/tvName"
+        android:padding="5sp"
+        android:textSize="14sp"/>
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="5"
+        android:id="@+id/ratingBar"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvDescription"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:id="@+id/qtyLayout"
+        android:layout_centerHorizontal="true">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/black"
+            android:background="@color/white"
+            android:rotation="90"
+            android:id="@+id/btnRemoveCart"
+            android:src="@android:drawable/ic_menu_info_details"/>
+        <TextView
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:textColor="@color/teal_700"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="5sp"
+            android:id="@+id/tvQty"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:text="0"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/black"
+            android:background="@color/white"
+            android:id="@+id/btnAddCart"
+            android:src="@android:drawable/ic_menu_add"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15sp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Price"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            android:id="@+id/tvPrice"
+            android:textSize="16sp"
+            android:text="$22"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add To Cart"
+        android:textSize="16sp"
+        android:id="@+id/btnAdd"
+        android:layout_margin="15sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:padding="15sp"/>
+</RelativeLayout>
